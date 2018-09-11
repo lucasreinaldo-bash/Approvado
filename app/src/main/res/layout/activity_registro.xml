@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gradient="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MenuAluno.Registro">
+
+
+
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/rg_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rg_senha"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:met_floatingLabel="highlight"
+        gradient:layout_constraintTop_toBottomOf="@+id/rg_sobrenome"
+        tools:layout_editor_absoluteX="99dp" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/rg_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="157dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="numberPassword"
+        app:met_floatingLabel="highlight"
+        gradient:layout_constraintTop_toBottomOf="@+id/rg_email"
+        tools:layout_editor_absoluteX="99dp" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/rg_contrasenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rg_senha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-157dp"
+        android:ems="10"
+        android:hint="Repita a senha"
+        android:inputType="numberPassword"
+        app:met_floatingLabel="highlight"
+        gradient:layout_constraintTop_toBottomOf="@+id/rg_senha"
+        tools:layout_editor_absoluteX="99dp" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/rg_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rg_sobrenome"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/background_light"
+        app:met_floatingLabel="highlight"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="179dp" />
+
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/rg_sobrenome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rg_email"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Sobrenome"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/background_light"
+        app:met_floatingLabel="highlight"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="179dp" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:drawable/editbox_background_normal"
+        android:text="Registrar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="510dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="65dp"
+        android:layout_height="63dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/usuario2" />
+
+
+</RelativeLayout>

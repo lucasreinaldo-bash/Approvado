@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_conteudoProgramatico"
+            android:icon="@drawable/assuntos"
+            android:title="Assuntos da Prova" />
+        <item
+            android:id="@+id/nav_cursos"
+            android:icon="@drawable/book"
+            android:title="Apostilas" />
+        <item
+            android:id="@+id/nav_quiz"
+            android:icon="@drawable/teste"
+            android:title="Quiz - Questões da Banca" />
+        <item
+            android:id="@+id/nav_quiz2"
+            android:icon="@drawable/teste2"
+            android:title="Simulado Diário" />
+
+
+    </group>
+
+    <item android:title="Banca Organizadora">
+        <menu>
+            <item
+                android:id="@+id/nav_site"
+                android:icon="@drawable/site"
+                android:title="Área do Candidato" />
+
+        </menu>
+    </item>
+    <item android:title="Sobre">
+        <menu>
+            <item
+                android:id="@+id/nav_sobre"
+                android:icon="@drawable/sobre"
+                android:title="Sobre o App"
+                />
+            <item
+                android:id="@+id/nav_sair"
+                android:icon="@drawable/sair"
+                android:title="Desconectar"
+                />
+        </menu>
+
+    </item>
+
+</menu>

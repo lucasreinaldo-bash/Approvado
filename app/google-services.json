@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "131379671159",
+    "firebase_url": "https://approvado-2212.firebaseio.com",
+    "project_id": "approvado-2212",
+    "storage_bucket": "approvado-2212.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131379671159:android:1be19b78d21754db",
+        "android_client_info": {
+          "package_name": "vostore.approvado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131379671159-b298fob2abedgn9pvit6cdsan5o7cf8d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vostore.approvado",
+            "certificate_hash": "8e95dacf6c6fad9f88ef5f89c3d1663d0cc145b4"
+          }
+        },
+        {
+          "client_id": "131379671159-d0m2n2hblll8pe387opogak065uib2as.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtshRtw8HvOpuvs8AFwQSi4xIQXanCAPM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131379671159-d0m2n2hblll8pe387opogak065uib2as.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
