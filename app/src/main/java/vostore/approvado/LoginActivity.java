@@ -51,34 +51,17 @@ public class LoginActivity extends AppCompatActivity {
 
         // Adicionando uma ação ao evento do click
         btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String email = emailusuario.getText().toString();
-                if (validaremail(email) && validarsenha()){
-                    String senha = senhausuario.getText().toString();
-                    mAuth.signInWithEmailAndPassword(email,senha)
-                            .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()){
+                                        @Override
+                                        public void onClick(View view) {
+
+                                            Toast.makeText(LoginActivity.this, "Login bem sucedido", Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                            startActivity(intent);
+                                            finish();
 
 
-                                        Toast.makeText(LoginActivity.this,"Login bem sucedido",Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                        startActivity(intent);
-                                        finish();
-                                    } else{
-                                        Toast.makeText(LoginActivity.this,"Não foi possível entrar no ambiente",Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
-                } else {
-                    Toast.makeText(LoginActivity.this,"Erro de Login",Toast.LENGTH_SHORT).show();
-                }
-
-
-            }
-        });
+                                        }
+                                    });
         // Adicionando uma ação ao evento do click
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,11 +81,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    //Funçoes criadas
-    private boolean validaremail(CharSequence target) {
-        return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
-    }
-    public boolean validarsenha(){
+     boolean validarsenha(){
         String contraseña;
         contraseña = senhausuario.getText().toString();
         if(contraseña.length()>=6 && contraseña.length()<=16){
@@ -139,3 +118,4 @@ public class LoginActivity extends AppCompatActivity {
 
 
 }
+

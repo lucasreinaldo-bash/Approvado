@@ -43,10 +43,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        database = FirebaseDatabase.getInstance();
-        nomegm = findViewById(R.id.gm);
-        mAuth = FirebaseAuth.getInstance();
-        usuarioFirebase = ConfiguracaoFirebase.getFirebaseAutenticacao();
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -59,26 +56,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
 
-        String email = mAuth.getCurrentUser().getEmail();
-        databaseReference = FirebaseDatabase.getInstance().getReference();
 
 
-        databaseReference.child("Usuario").orderByChild("email").equalTo(email).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for(DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    String nome = postSnapshot.child("nome").getValue().toString();
-                    nomegm.setText("\n#GM "+ nome);
-                    //Toast.makeText(MenuResstrito.this, "Hello "+ nome, Toast.LENGTH_SHORT).show();
 
-                }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
 
-            }
-        });
     }
 
         @Override
